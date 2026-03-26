@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.1.27:5432/divingbase
+    username: diving_db_user
+    password: ddzad6az65d46a5z4d5az41321daz654d23
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: diving_api
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  security:
+    user:
+      name: user
+      password: raerae
+      roles: manager
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://diverhub-rec.eu.auth0.com/
+logging:
+  level:
+    org:
+      hibernate: INFO
+      springframework.web: DEBUG
+    root: INFO
+
+
+server:
+  servlet:
+    context-path: /api
+redis:
+  host: 192.168.1.27
+  password: f45afz5d4za654dza
+
+appli:
+  securityDisable: false
+  oakrest:
+    auth0:
+      domain: "https://diverhub-rec.eu.auth0.com"
+      client-id: "0Ih37KMDdJ2nGroB1Pcnjx2WYLV0Rj9u"
+      client-secret: "n7vbnGkF01WsR39RKUFDBe5GTTwZJ6G35PyWnMS8iTWI8YFBtrmkzBMNuBmPPNdT"
+      audience: "https://diverhub-rec.eu.auth0.com/api/v2/"
+
+okta:
+  auth2:
+    issuer: https://diverhub-rec.eu.auth0.com/
+    audience: https://diverhub-rec.eu.auth0.com/api/v2/

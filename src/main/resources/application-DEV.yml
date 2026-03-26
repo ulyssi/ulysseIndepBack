@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.1.27:5432/divingbase
+    username: diving_db_user
+    password: ddzad6az65d46a5z4d5az41321daz654d23
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+server:
+  servlet:
+    context-path: /ulysse_indep_api
+
+redis:
+  host: redis://192.168.1.27:6379/3
+  password: f45afz5d4za654dza
+
+okta:
+  auth2:
+    issuer: https://diverhub-rec.eu.auth0.com/
+    audience: https://diverhub-rec.eu.auth0.com/api/v2/

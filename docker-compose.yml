@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:16
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: divingbase
+      POSTGRES_USER: diving_db_user
+      POSTGRES_PASSWORD: ddzad6az65d46a5z4d5az41321daz654d23
+    ports:
+      - 5432:5432
+    restart: unless-stopped
